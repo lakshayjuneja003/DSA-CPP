@@ -34,7 +34,7 @@ void InsertAtTail(Node* &tail , int data){
     tail->next = temp;
     tail = temp;
 }
-void print(Node* Head){
+void print(Node* &Head){
 
       if(Head == NULL) {
         cout << "List is empty "<< endl;
@@ -47,7 +47,7 @@ void print(Node* Head){
     }
     cout << endl;
 }
-void deleteNode(Node* Head , int pos){
+void deleteNode(Node* &Head , int pos){
     Node* temp = Head;
     if(pos == 1){
         Head = temp->next;
