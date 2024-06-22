@@ -17,7 +17,7 @@ public:
         cout << "Memory is free for node with data " << data << endl;
     }
 };
-
+// itreatatively reverse linked list
 // Function to reverse the linked list
 void reverse(Node* &Head) {
     Node* curr = Head;
@@ -30,6 +30,19 @@ void reverse(Node* &Head) {
         curr = forward;
     }
     Head = prev;
+}
+
+// recursively reverse linked list
+void reverseRecursivly(Node* &Head , Node* curr , Node* prev) {
+    if( curr == NULL)
+    {
+        Head = prev;
+        return ;
+    }
+    Node* forward = curr->next;;
+    reverseRecursivly(Head , forward , curr);
+    curr->next = prev;
+  
 }
 
 // Function to insert a node at the head of the linked list
@@ -111,7 +124,10 @@ int main() {
     printList(Head);
 
     // Reversing the linked list
-    reverse(Head);
+    // reverse(Head);
+    Node* curr = Head;
+    Node* prev = NULL;
+    reverseRecursivly(Head , curr , prev);
 
     cout << "Reversed List: ";
     printList(Head);
