@@ -71,7 +71,8 @@ Node* sortList(Node *head)
     
     return head;
 }
-
+// time complexity - 0(n);
+// space complexity - 0(1);
 
 
 // solution two 
@@ -120,4 +121,7 @@ Node* sortList(Node *head){
     // returning the head after modifing the data
     return head;
 }
+// time complexity - 0(n);
+// space complexity - 0(1);
+
  */
