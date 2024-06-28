@@ -71,3 +71,53 @@ Node* sortList(Node *head)
     
     return head;
 }
+
+
+
+// solution two 
+/*
+Node* sortList(Node *head){
+    int zeroCnt = 0;
+    int oneCnt = 0;
+    int twoCnt = 0;
+    Node* temp = head;
+    // counting the numbers of zeros and ones
+    while(temp != NULL){
+        if(temp -> data == 0){
+            zeroCnt++;
+        }
+        else if(temp -> data == 1){
+            oneCnt++;
+        }
+        else if(temp -> data == 2){
+            twoCnt++;
+        }
+
+        temp = temp -> next;
+    }
+
+    // again resting the temp to first node
+    temp = head;
+
+    while(temp != NULL){
+        if(zeroCnt != 0){
+            temp -> data = 0;
+            zeroCnt --;
+        }
+        else if(oneCnt != 0){
+           temp -> data = 0;
+            oneCnt --; 
+        }
+         else if(twoCnt != 0){
+           temp -> data = 0;
+            twoCnt --; 
+        }
+
+
+        temp = temp->next;
+    }
+
+    // returning the head after modifing the data
+    return head;
+}
+ */
